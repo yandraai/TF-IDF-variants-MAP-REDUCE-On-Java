@@ -27,3 +27,16 @@ and 8 documents have the word more than once, the TF IDF value in the first prog
 s not in the top 15 words of the document BUT after ignoring the less frequent words , we observe that
 the TF IDF value shoots up to 0.043 which now give the actual picture regarding the relevance of the
 word in the corpus and it now appears in the top15.
+
+Stage-3
+-------
+- Now considering a “Term” to mean a 2-gram (two words occurring sequentially) in a document. Comparision on which one of these till now (2 and Stage 3) better charaterizes the document better.
+**Stage-2**: Unigram after removing the words that appear just once in each document.
+**Stage-3**: Bigram for all the words in each document.
+*In general, bigrams or ngrams give a better context about the document than a unigram tf-idf gives.
+Reason being bigrams portray more information than a unigram does. For example, Injected Humour is
+one such word that makes more sense together when characterizing the document than the individual
+words do. Choosing bigram signature makes more sense in this context which speaks better about the
+document
+However, when the corpus is sparse, ie.,the occurrence of the bigrams together is less frequent then
+they might turn up having very less tf-idf value leading to be less useful than unigrams.*

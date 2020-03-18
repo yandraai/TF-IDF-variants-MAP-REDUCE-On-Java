@@ -31,6 +31,10 @@ word in the corpus and it now appears in the top15.
 Stage-3
 -------
 - Now considering a “Term” to mean a 2-gram (two words occurring sequentially) in a document. Comparision on which one of these till now (2 and Stage 3) better charaterizes the document better.
+
+Observations on the variation between Stage 2 and Stage 3:
+-------------------------------------------------------------
+
 **Stage-2**: Unigram after removing the words that appear just once in each document.
 **Stage-3**: Bigram for all the words in each document.
 *In general, bigrams or ngrams give a better context about the document than a unigram tf-idf gives.
@@ -40,3 +44,21 @@ words do. Choosing bigram signature makes more sense in this context which speak
 document
 However, when the corpus is sparse, ie.,the occurrence of the bigrams together is less frequent then
 they might turn up having very less tf-idf value leading to be less useful than unigrams.*
+
+Stage-4
+-------
+-Run the Stage-1, Stage-2 and Stage-3 on an entire collection of documents aliased as Part-A, Part-B and Part-C inspite of a sparse corpus as used for the above stages and observe the difference.
+
+Observations on the variation between Stage 1,2,3 and Stage 4:
+-------------------------------------------------------------
+|PART A – Unigrams without filtering|PART B – Unigrams after filtering less frequent words|PART C – Bigrams without filtering|
+|-----------------------------------|-----------------------------------------------------|----------------------------------|
+|The top 15 words in each document form the signature of the document.|Top 15 words of each document with increased TF-IDF valuesform the signature of the document. Better than the Part A output.| Top 15 bigrams of each document form the signature of the document. Better than the unigrams as the corpse is not sparse.|
+When the output for Bigrams is observed, we note that the corpse is not a sparse one, that is, the
+occurrence of bigrams is a significant number and hence a bigram signature in this context best
+represents the document rather than a unigram signature.
+For instance, it is very fascinating to see how the bigrams of the document 1342-0 listed all the
+characters that are present in the story of the document and whether they are male or female as they
+have the titles associated (MR or MRS). Look into the *Complete report with Ouputs and Code Stage 3 and 4* uploaded here for these example's tf-idf values.
+Also please refer this link for “ tf idf” values of all the words :
+**https://drive.google.com/drive/u/0/folders/1GPyACEdTFq52ZJ1UCfqz3sCJSEFjWi77**

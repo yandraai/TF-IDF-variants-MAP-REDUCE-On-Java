@@ -8,11 +8,10 @@ Stage-1
 
 Stage-2
 --------
-
+- Modified the programs to remove from consideration all those words that occur only once in each document. Repeated the tasks of Stage-1 above
 
 Observations on the variation between Stage 1 and Stage 2:
 -------------------------------------------------------------
-
 - We observe the words with more relevance across the corpus appear in the top 15 .
 - The effect of the words that just appear once in a word and once in a document or very few
 documents is high on the TF IDF value on the whole as the denominator depends on it.
